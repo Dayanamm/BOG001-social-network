@@ -323,6 +323,10 @@ body {
 }
 
 @media only screen and (min-height: 768px) {
+  body {
+    background-image: url(img/background-web3.jpg);
+  }
+  
   .header-profile img {
     border-radius: 10px 91px 4px 25px;
   }
