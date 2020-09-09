@@ -194,7 +194,7 @@ footer {
 }
 @media only screen and (min-height: 880px) {
   body {
-    background-image: url(/img/background-web3.jpg);
+    background-image: url(img/background-web3.jpg);
   }
 
   .logo {
@@ -258,7 +258,7 @@ footer {
 
 @media only screen and (min-width: 1000px) {
   body {
-    background-image: url(/img/background-web3.jpg);
+    background-image: url(img/background-web3.jpg);
     flex-direction: column;
   }
 

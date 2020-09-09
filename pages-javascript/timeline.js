@@ -23,7 +23,7 @@ export const showTimelineAfterAuth = () => {
 export const loadTimeline = async () => {
   const userId = localStorage.getItem("userUID");
   let userName = "";
-  let userPhoto = "/img/Profile_placeholder.png";
+  let userPhoto = "img/Profile_placeholder.png";
   await store
     .collection(USER_PROFILE_COLLECTION)
     .where("userId", "==", userId)
@@ -46,7 +46,7 @@ export const loadTimeline = async () => {
 
   sectionTimeline.innerHTML = `<div id="headLogoUserContainer" class="head-logo-user-container">
   <div id="containerLogoTimeline" class="container-logo-timeline">
-    <img src="/img/Logo.png" alt="Logo" />
+    <img src="img/Logo.png" alt="Logo" />
     <p>Terra Tour</p>
   </div>
   <div id="userHead" class="user-head">
@@ -77,7 +77,7 @@ export const loadTimeline = async () => {
     }
 
     let userNamePost = "";
-    let userPhotoPost = "/img/Profile_placeholder.png";
+    let userPhotoPost = "img/Profile_placeholder.png";
     await store
       .collection(USER_PROFILE_COLLECTION)
       .where("userId", "==", cardPost.userId)
@@ -116,8 +116,8 @@ export const loadTimeline = async () => {
                   <p id="descriptionCardDate">${cardPost.dateImg}</p>
                   <p>${cardPost.descriptionPost}</p>
                 <div class="container-like">
-                  <button id="${likeOffId}" post-id="${querySnapshot.docs[i].id}" class="like-on-container" style="${displayOff}" > <img src="/img/LikeOff.png" alt="LikeOff" class="like-off" ></button>
-                  <button id="${likeOnId}" post-id="${querySnapshot.docs[i].id}" class="like-off-container" style="${displayOn}" > <img src="/img/LikeOn.png" alt="LikeOn" class="like-on" ></button>
+                  <button id="${likeOffId}" post-id="${querySnapshot.docs[i].id}" class="like-on-container" style="${displayOff}" > <img src="img/LikeOff.png" alt="LikeOff" class="like-off" ></button>
+                  <button id="${likeOnId}" post-id="${querySnapshot.docs[i].id}" class="like-off-container" style="${displayOn}" > <img src="img/LikeOn.png" alt="LikeOn" class="like-on" ></button>
                   <p>${cardPost.like.length}</p>
                 </div>
               </div>

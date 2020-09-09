@@ -76,7 +76,7 @@ export async function showPost() {
   formPost.style.display = "flex";
   sectionMyProfile.style.display = "none";
   header.style.display = "none";
-  if(mediaqueryList.matches) {
+  if (mediaqueryList.matches) {
     footer.style.display = "none";
     console.log("entra");
   }
@@ -84,12 +84,12 @@ export async function showPost() {
     footer.style.display = "block";
     console.log("sale");
   }
-  
+
   hideHamburguerBeforePost();
 
   const userId = localStorage.getItem("userUID");
   let userName = "";
-  let userPhoto = "/img/Profile_placeholder.png";
+  let userPhoto = "img/Profile_placeholder.png";
   const userProfile = await store
     .collection(USER_PROFILE_COLLECTION)
     .where("userId", "==", userId)

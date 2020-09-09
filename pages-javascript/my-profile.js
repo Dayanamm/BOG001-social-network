@@ -27,7 +27,7 @@ export const loadMyProfile = async () => {
     .get();
 
   let userName = "";
-  let userPhoto = "/img/Profile_placeholder.png";
+  let userPhoto = "img/Profile_placeholder.png";
   const userProfile = await store
     .collection(USER_PROFILE_COLLECTION)
     .where("userId", "==", userId)
@@ -44,7 +44,7 @@ export const loadMyProfile = async () => {
 
   sectionMyProfile.innerHTML = ` 
             <div class = "header-profile">
-              <img src="/img/Logo.png" alt="Logo" class="logo-profile" >
+              <img src="img/Logo.png" alt="Logo" class="logo-profile" >
               <h1>Profile</h1>
             </div>
             <div id="userHead" class="user-head-profile"> 
@@ -99,11 +99,11 @@ export const loadMyProfile = async () => {
                 <p id="descriptionCardDate">${cardPost.dateImg}</p>
                 <p>${cardPost.descriptionPost}</p>
               <div class="container-like">
-                <button id="${likeOffId}" post-id="${querySnapshot.docs[i].id}" style="${displayOff}" class="btn-unlike"><img src="/img/LikeOff.png" alt="LikeOff" class="like-off" ></button>
-                <button id="${likeOnId}" post-id="${querySnapshot.docs[i].id}" style="${displayOn}" class="btn-like"><img src="/img/LikeOn.png" alt="LikeOn" class="like-on" ></button>
+                <button id="${likeOffId}" post-id="${querySnapshot.docs[i].id}" style="${displayOff}" class="btn-unlike"><img src="img/LikeOff.png" alt="LikeOff" class="like-off" ></button>
+                <button id="${likeOnId}" post-id="${querySnapshot.docs[i].id}" style="${displayOn}" class="btn-like"><img src="img/LikeOn.png" alt="LikeOn" class="like-on" ></button>
                 <p>${cardPost.like.length}</p>
                 <div class = "button-crud">
-                  <button id="${crudEditId}" class="btn-crud"><img src="/img/lapiz.png" alt="pencilCRUD" class="pencil-crud"></button>
+                  <button id="${crudEditId}" class="btn-crud"><img src="img/lapiz.png" alt="pencilCRUD" class="pencil-crud"></button>
                   <button id="${modalId}" post-id="${querySnapshot.docs[i].id}" class="delete-button" style="${displayDelete}">Delete</button>
                   <button id="${modalEditId}" post-id="${querySnapshot.docs[i].id}" class="edit-button" style="${displayEdit}">Edit</button>
                 </div>   

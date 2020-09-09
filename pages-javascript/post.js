@@ -29,7 +29,7 @@ export const showPostUser = async () => {
   footer.style.display = "none";
   const userId = localStorage.getItem("userUID");
   let userName = "";
-  let userPhoto = "/img/Profile_placeholder.png";
+  let userPhoto = "img/Profile_placeholder.png";
   const userProfile = await store
     .collection(USER_PROFILE_COLLECTION)
     .where("userId", "==", userId)
